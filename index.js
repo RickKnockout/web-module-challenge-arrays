@@ -2,37 +2,37 @@
 
 /* 👀 This is your data ⬇ */
 const originalFlavors = [
-  "Banana Nut Fudge",
-  "Black Walnut",
-  "Burgundy Cherry",
-  "Butterscotch Ribbon",
-  "Cherry Macaron",
-  "Chocolate",
-  "Chocolate Almond",
-  "Chocolate Chip",
-  "Chocolate Fudge",
-  "Chocolate Mint",
-  "Chocolate Ribbon",
-  "Coffee",
-  "Coffee Candy",
-  "Date Nut",
-  "Eggnog",
-  "French Vanilla",
-  "Green Mint Stick",
-  "Lemon Crisp",
-  "Lemon Custard",
-  "Lemon Sherbet",
-  "Maple Nut",
-  "Orange Sherbet",
-  "Peach",
-  "Peppermint Fudge Ribbon",
-  "Peppermint Stick",
-  "Pineapple Sherbet",
-  "Raspberry Sherbet",
-  "Rocky Road",
-  "Strawberry",
-  "Vanilla",
-  "Vanilla Burnt Almond"
+	"Banana Nut Fudge",
+	"Black Walnut",
+	"Burgundy Cherry",
+	"Butterscotch Ribbon",
+	"Cherry Macaron",
+	"Chocolate",
+	"Chocolate Almond",
+	"Chocolate Chip",
+	"Chocolate Fudge",
+	"Chocolate Mint",
+	"Chocolate Ribbon",
+	"Coffee",
+	"Coffee Candy",
+	"Date Nut",
+	"Eggnog",
+	"French Vanilla",
+	"Green Mint Stick",
+	"Lemon Crisp",
+	"Lemon Custard",
+	"Lemon Sherbet",
+	"Maple Nut",
+	"Orange Sherbet",
+	"Peach",
+	"Peppermint Fudge Ribbon",
+	"Peppermint Stick",
+	"Pineapple Sherbet",
+	"Raspberry Sherbet",
+	"Rocky Road",
+	"Strawberry",
+	"Vanilla",
+	"Vanilla Burnt Almond"
 ]
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: Copy the Array! 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -47,8 +47,8 @@ Use the copy function below to do the following:
 
 // let newArray = copy(originalFlavors);
 
-function copy(arrayTest){
-  return arrayTest;
+function copy(arrayTest) {
+	return arrayTest;
 }
 
 // let testCopy = copy(originalFlavors);
@@ -66,13 +66,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(arrayCount){
-  if (arrayCount.length === 31) {
-    return true;
-  } else {
-    return false;
-  }
- }
+function is31Flavors(arrayCount) {
+	if (arrayCount.length === 31) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -88,10 +88,11 @@ Use the addFlavor function below to do the following:
 */
 
 let strNewFlavor = "Test Flavor";
-function addFlavor(originalFlavors,strNewFlavor){
-  originalFlavors.unshift(strNewFlavor);
-  return originalFlavors;
- }
+
+function addFlavor(originalFlavors, strNewFlavor) {
+	originalFlavors.unshift(strNewFlavor);
+	return originalFlavors;
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -108,9 +109,9 @@ Use the removeLastFlavor function below to do the following:
 // let arrayTestPop = originalFlavors;
 // removeLastFlavor(arrayTestPop);
 //console.log(originalFlavors);
-function removeLastFlavor(arrayToPop){
- arrayToPop.pop();
-  return arrayToPop;
+function removeLastFlavor(arrayToPop) {
+	arrayToPop.pop();
+	return arrayToPop;
 }
 
 
@@ -130,8 +131,8 @@ Use the getFlavorByIndex function below to do the following:
 //let indexTestOutput = getFlavorByIndex(indexArrayTest,1);
 //console.log (indexTestOutput);
 
-function getFlavorByIndex(indexArray,indexNum){
-  return indexArray[indexNum];
+function getFlavorByIndex(indexArray, indexNum) {
+	return indexArray[indexNum];
 }
 
 
@@ -152,11 +153,11 @@ Use the removeFlavorByName function below to do the following:
 
 // removeFlavorByName(originalFlavors,"Rocky Road");
 
-function removeFlavorByName(flavorArray,flavorName){
-  let removeIndex = flavorArray.indexOf(flavorName);
-  flavorArray.splice(removeIndex,1);
- // console.log(flavorArray);
-  return flavorArray;
+function removeFlavorByName(flavorArray, flavorName) {
+	let removeIndex = flavorArray.indexOf(flavorName);
+	flavorArray.splice(removeIndex, 1);
+	// console.log(flavorArray);
+	return flavorArray;
 }
 
 
@@ -185,19 +186,19 @@ Use the filterByWord function below to do the following:
 let filterByWordArray = filterByWord(originalFlavors, "Chocolate");
 // console.log("filterByWord: " + filterByWordArray);
 
-function filterByWord(promoArray,flavorPromo){
+function filterByWord(promoArray, flavorPromo) {
 	let newFilteredArray = [];
-  for (i=1;i<promoArray.length;i++){
-  //console.log(promoArray[i])
-    if(promoArray[i].includes(flavorPromo)){
-       newFilteredArray.push(promoArray[i]);
-       }
-     }
-return newFilteredArray;
+	for (i = 1; i < promoArray.length; i++) {
+		//console.log(promoArray[i])
+		if (promoArray[i].includes(flavorPromo)) {
+			newFilteredArray.push(promoArray[i]);
+		}
+	}
+	return newFilteredArray;
 }
 
 
-/* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
+/* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/
 
 /* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
 
@@ -209,20 +210,20 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 let testAverageArray = getAverageWordLength(originalFlavors);
-console.log (testAverageArray);
+console.log(testAverageArray);
 
-function getAverageWordLength(arr){
+function getAverageWordLength(arr) {
 	let averageInt = 0;
-	for (i=1;i<arr.length;i++){
-  averageInt = averageInt + getWordCount(arr[i]);
-  console.log("Total Words: " + averageInt);
-  }
-  return averageInt / arr.length;
+	for (i = 1; i < arr.length; i++) {
+		averageInt = averageInt + getWordCount(arr[i]);
+		console.log("Total Words: " + averageInt);
+	}
+	return averageInt / arr.length;
 }
 
 function getWordCount(str) {
-  const arr = str.split(' ');
-  return arr.filter(word => word !== '').length;
+	const arr = str.split(' ');
+	return arr.filter(word => word !== '').length;
 }
 
 
@@ -239,8 +240,8 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-  /*code here*/
+function getRandomFlavors( /*code here*/ ) {
+	/*code here*/
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
@@ -327,21 +328,20 @@ function getRandomFlavors(/*code here*/){
 
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
-function foo(){
-  console.log('its working');
-  return 'bar';
+function foo() {
+	console.log('its working');
+	return 'bar';
 }
 foo();
 module.exports = {
-  foo,
-  is31Flavors,
-  addFlavor,
-  removeLastFlavor,
-  getFlavorByIndex,
-  removeFlavorByName,
-  copy,
-  filterByWord,
-  getAverageWordLength,
-  getRandomFlavors
+	foo,
+	is31Flavors,
+	addFlavor,
+	removeLastFlavor,
+	getFlavorByIndex,
+	removeFlavorByName,
+	copy,
+	filterByWord,
+	getAverageWordLength,
+	getRandomFlavors
 }
-
