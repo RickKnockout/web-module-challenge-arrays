@@ -180,17 +180,156 @@ Use the filterByWord function below to do the following:
 */
 
 
+//let filterArrayTest = filterByWord(originalFlavors,"Chocolate");
+//console.log(filterArrayTest);
 let filterByWordArray = filterByWord(originalFlavors, "Chocolate");
 // console.log("filterByWord: " + filterByWordArray);
 
 function filterByWord(promoArray,flavorPromo){
 	let newFilteredArray = [];
   for (i=1;i<promoArray.length;i++){
-  // console.log(promoArray[i])
+  console.log(promoArray[i])
     if(promoArray[i].includes(flavorPromo)){
        newFilteredArray.push(promoArray[i]);
        }
      }
 return newFilteredArray;
+}
+
+
+/* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
+
+/* STRETCH 1: Write a function that returns the average number of words in an array. You should be able to use this function for any array, but can test with originalFlavors.
+
+Use the getAverageWordLength function below to do the following:
+  1. Receive the originalFlavors array
+  2. Count how many words per item in the array
+  3. Return the average number of words per item in the array
+
+  For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
+*/
+
+function getAverageWordLength(/*code here*/){
+  /*code here*/
+}
+
+
+/* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
+Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
+from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors and store it in an array called randomFlavors.
+
+Use the getRandomFlavors function and new arrays below to do the following:
+  1. Receive the four arrays with all the differnet flavors (originalFlavors is above, the others are below)
+  2. Randomly pick flavors from all four arrays
+  3. Return a new array called randomFlavors that has a lenght of 31
+
+  For example: getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors) might return ["Strawberry Cheesecake", "Eggnog,"..."Chocolate"].
+*/
+
+
+function getRandomFlavors(/*code here*/){
+  /*code here*/
+}
+
+// NEW DATA ARRAYS FOR STRETCH 2 ⬇️
+// const newFlavors = [
+//   "Date night",
+//   "U.S.S Butterscotch (Stranger Things special)",
+//   "Honey Almond",
+//   "Mint Chocolate Chip",
+//   "Chocolate",
+//   "Oreo® Cookies'n Cream",
+//   "Chocolate Chip",
+//   "Pralines 'n Cream",
+//   "Very Berry Strawberry",
+//   "Chocolate Chip Cookie Dough",
+//   "Old Fashioned Butter Pecan",
+//   "Jamoca®",
+//   "Jamoca® Almond Fudge",
+//   "Reese's® Peanut Butter Cup",
+//   "Rocky Road",
+//   "Peanut Butter ’n Chocolate",
+//   "Gold Medal Ribbon®",
+//   "World Class® Chocolate",
+//   "Cherries Jubilee",
+//   "Chocolate Fudge",
+//   "Daiquiri Ice",
+//   "Rainbow Sherbet",
+//   "Rainbow Swirl"
+// ] 
+
+// const seasonalFlavors = [
+//   "America's Birthday Cake",
+//   "Baseball Nut®",
+//   "Blueberry Cheesecake",
+//   "Bourbon Street Pecan Pie",
+//   "Brownie Bar Mashup",
+//   "Cherry Cordial with Kisses",
+//   "Chocolate Mousse Royale",
+//   "French Vanilla",
+//   "Eggnog",
+//   "German Chocolate Cake",
+//   "Icing on the Cake",
+//   "Love Potion #31",
+//   "New York Cheesecake",
+//   "Nutty Coconut",
+//   "Peppermint",
+//   "Strawberry Cheesecake",
+//   "Rock ’n Pop Swirl",
+//   "Reese’s Peanut Butter Cup",
+//   "Trick Oreo Treat",
+//   "Winter White Chocolate",
+//   "made with Snickers®",
+//   "made with M&M's®",
+//   "Heath®",
+//   "Mango Tango"
+// ]
+
+// const regionalFlavors = [
+//   "Pink Bubblegum",
+//   "Caramel Macchiato",
+//   "York Peppermint Pattie",
+//   "Cotton Candy",
+//   "Orange Sherbet",
+//   "Grape Ice",
+//   "Watermelon Ice",
+//   "Miami Vice Sorbet",
+//   "Splish Splash®",
+//   "Wild 'n Reckless Sherbet",
+//   "Lemon Custard",
+//   "Oregon Blackberry",
+//   "Bananas ‘n Strawberries",
+//   "Mississippi Mud",
+//   "Rum Raisin",
+//   "Creole Cream Cheese",
+//   "Chocolate Almond",
+//   "Fudge Brownie",
+//   "Banana Nut",
+//   "Black Walnut",
+//   "Cotton Candy Crackle",
+//   "Quarterback Crunch",
+//   "Chocolate Chocolate Chip Cheesecake",
+//   "Caramel 'n' Cookies"
+// ]
+
+
+
+/* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
+function foo(){
+  console.log('its working');
+  return 'bar';
+}
+foo();
+module.exports = {
+  foo,
+  is31Flavors,
+  addFlavor,
+  removeLastFlavor,
+  getFlavorByIndex,
+  removeFlavorByName,
+  copy,
+  filterByWord,
+  getAverageWordLength,
+  getRandomFlavors
 }
 
