@@ -339,14 +339,21 @@ function getRandomFlavors(arr1, arr2, arr3, arr4) {
 	let randomFlavors = [];
 	for (let i = 1; i <= 31; i++) {
 		let arrayChosen = "arr" + randomInt(1, 4); // Should return arr1, arr2, arr3, or arr4
-		// console.log(arrayChosen);
-		arrayChosen = eval(arrayChosen); // Convert string to variable name
-		//console.log(arrayChosen);
-		//console.log(arrayChosen.length);
-		let randomIndex = randomInt(0, arrayChosen.length - 1); // Choose random index from 0 to length of chosen array - 1 to account for starting index 0
+		console.log("Array chosen: " + arrayChosen)
+    arrayChosen = eval(arrayChosen); // Convert string to variable name
+    let randomIndex = randomInt(0, arrayChosen.length - 1); // Choose random index from 0 to length of chosen array - 1 to account for starting index 0
 		let finalChoice = arrayChosen[randomIndex];
-		randomFlavors.push(finalChoice);;
-
+		console.log("First random index: " + randomIndex);
+		console.log("First choice: " + finalChoice);
+		console.log("Does this already exist? " + randomFlavors.includes(finalChoice))
+		while (randomFlavors.includes(finalChoice)) { // to verify we haven't chosen a duplicate
+			console.log("Picking new one...");
+			randomIndex = randomInt(0, arrayChosen.length - 1);
+			console.log("New random index: " + randomIndex)
+			finalChoice = arrayChosen[randomIndex];
+			console.log("New finalChoice: " + finalChoice)
+		}
+		randomFlavors.push(finalChoice);
 	}
 	return randomFlavors;
 }
