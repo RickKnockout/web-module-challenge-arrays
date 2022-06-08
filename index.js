@@ -188,7 +188,7 @@ let filterByWordArray = filterByWord(originalFlavors, "Chocolate");
 
 function filterByWord(promoArray, flavorPromo) {
 	let newFilteredArray = [];
-	for (i = 1; i < promoArray.length; i++) {
+	for (let i = 1; i < promoArray.length; i++) {
 		//console.log(promoArray[i])
 		if (promoArray[i].includes(flavorPromo)) {
 			newFilteredArray.push(promoArray[i]);
