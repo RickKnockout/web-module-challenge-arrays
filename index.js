@@ -214,7 +214,7 @@ console.log(testAverageArray);
 
 function getAverageWordLength(arr) {
 	let averageInt = 0;
-	for (i = 1; i < arr.length; i++) {
+	for (let i = 1; i < arr.length; i++) {
 		averageInt = averageInt + getWordCount(arr[i]);
 		console.log("Total Words: " + averageInt);
 	}
