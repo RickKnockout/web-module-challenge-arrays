@@ -188,7 +188,7 @@ let filterByWordArray = filterByWord(originalFlavors, "Chocolate");
 function filterByWord(promoArray,flavorPromo){
 	let newFilteredArray = [];
   for (i=1;i<promoArray.length;i++){
-  console.log(promoArray[i])
+  //console.log(promoArray[i])
     if(promoArray[i].includes(flavorPromo)){
        newFilteredArray.push(promoArray[i]);
        }
@@ -208,9 +208,21 @@ Use the getAverageWordLength function below to do the following:
 
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
+let testAverageArray = getAverageWordLength(originalFlavors);
+console.log (testAverageArray);
 
-function getAverageWordLength(/*code here*/){
-  /*code here*/
+function getAverageWordLength(arr){
+	let averageInt = 0;
+	for (i=1;i<arr.length;i++){
+  averageInt = averageInt + getWordCount(arr[i]);
+  console.log("Total Words: " + averageInt);
+  }
+  return averageInt / arr.length;
+}
+
+function getWordCount(str) {
+  const arr = str.split(' ');
+  return arr.filter(word => word !== '').length;
 }
 
 
