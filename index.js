@@ -188,7 +188,7 @@ let filterByWordArray = filterByWord(originalFlavors, "Chocolate");
 
 function filterByWord(promoArray, flavorPromo) {
 	let newFilteredArray = [];
-	for (let i = 1; i < promoArray.length; i++) {
+	for (i = 1; i < promoArray.length; i++) {
 		//console.log(promoArray[i])
 		if (promoArray[i].includes(flavorPromo)) {
 			newFilteredArray.push(promoArray[i]);
@@ -210,13 +210,13 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 let testAverageArray = getAverageWordLength(originalFlavors);
-console.log(testAverageArray);
+//console.log(testAverageArray);
 
 function getAverageWordLength(arr) {
 	let averageInt = 0;
-	for (let i = 1; i < arr.length; i++) {
+	for (i = 1; i < arr.length; i++) {
 		averageInt = averageInt + getWordCount(arr[i]);
-		console.log("Total Words: " + averageInt);
+		//console.log("Total Words: " + averageInt);
 	}
 	return averageInt / arr.length;
 }
@@ -240,92 +240,112 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors( /*code here*/ ) {
-	/*code here*/
-}
-
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
-// const newFlavors = [
-//   "Date night",
-//   "U.S.S Butterscotch (Stranger Things special)",
-//   "Honey Almond",
-//   "Mint Chocolate Chip",
-//   "Chocolate",
-//   "Oreo® Cookies'n Cream",
-//   "Chocolate Chip",
-//   "Pralines 'n Cream",
-//   "Very Berry Strawberry",
-//   "Chocolate Chip Cookie Dough",
-//   "Old Fashioned Butter Pecan",
-//   "Jamoca®",
-//   "Jamoca® Almond Fudge",
-//   "Reese's® Peanut Butter Cup",
-//   "Rocky Road",
-//   "Peanut Butter ’n Chocolate",
-//   "Gold Medal Ribbon®",
-//   "World Class® Chocolate",
-//   "Cherries Jubilee",
-//   "Chocolate Fudge",
-//   "Daiquiri Ice",
-//   "Rainbow Sherbet",
-//   "Rainbow Swirl"
-// ] 
+const newFlavors = [
+	"Date night",
+	"U.S.S Butterscotch (Stranger Things special)",
+	"Honey Almond",
+	"Mint Chocolate Chip",
+	"Chocolate",
+	"Oreo® Cookies'n Cream",
+	"Chocolate Chip",
+	"Pralines 'n Cream",
+	"Very Berry Strawberry",
+	"Chocolate Chip Cookie Dough",
+	"Old Fashioned Butter Pecan",
+	"Jamoca®",
+	"Jamoca® Almond Fudge",
+	"Reese's® Peanut Butter Cup",
+	"Rocky Road",
+	"Peanut Butter ’n Chocolate",
+	"Gold Medal Ribbon®",
+	"World Class® Chocolate",
+	"Cherries Jubilee",
+	"Chocolate Fudge",
+	"Daiquiri Ice",
+	"Rainbow Sherbet",
+	"Rainbow Swirl"
+]
 
-// const seasonalFlavors = [
-//   "America's Birthday Cake",
-//   "Baseball Nut®",
-//   "Blueberry Cheesecake",
-//   "Bourbon Street Pecan Pie",
-//   "Brownie Bar Mashup",
-//   "Cherry Cordial with Kisses",
-//   "Chocolate Mousse Royale",
-//   "French Vanilla",
-//   "Eggnog",
-//   "German Chocolate Cake",
-//   "Icing on the Cake",
-//   "Love Potion #31",
-//   "New York Cheesecake",
-//   "Nutty Coconut",
-//   "Peppermint",
-//   "Strawberry Cheesecake",
-//   "Rock ’n Pop Swirl",
-//   "Reese’s Peanut Butter Cup",
-//   "Trick Oreo Treat",
-//   "Winter White Chocolate",
-//   "made with Snickers®",
-//   "made with M&M's®",
-//   "Heath®",
-//   "Mango Tango"
-// ]
+const seasonalFlavors = [
+	"America's Birthday Cake",
+	"Baseball Nut®",
+	"Blueberry Cheesecake",
+	"Bourbon Street Pecan Pie",
+	"Brownie Bar Mashup",
+	"Cherry Cordial with Kisses",
+	"Chocolate Mousse Royale",
+	"French Vanilla",
+	"Eggnog",
+	"German Chocolate Cake",
+	"Icing on the Cake",
+	"Love Potion #31",
+	"New York Cheesecake",
+	"Nutty Coconut",
+	"Peppermint",
+	"Strawberry Cheesecake",
+	"Rock ’n Pop Swirl",
+	"Reese’s Peanut Butter Cup",
+	"Trick Oreo Treat",
+	"Winter White Chocolate",
+	"made with Snickers®",
+	"made with M&M's®",
+	"Heath®",
+	"Mango Tango"
+]
 
-// const regionalFlavors = [
-//   "Pink Bubblegum",
-//   "Caramel Macchiato",
-//   "York Peppermint Pattie",
-//   "Cotton Candy",
-//   "Orange Sherbet",
-//   "Grape Ice",
-//   "Watermelon Ice",
-//   "Miami Vice Sorbet",
-//   "Splish Splash®",
-//   "Wild 'n Reckless Sherbet",
-//   "Lemon Custard",
-//   "Oregon Blackberry",
-//   "Bananas ‘n Strawberries",
-//   "Mississippi Mud",
-//   "Rum Raisin",
-//   "Creole Cream Cheese",
-//   "Chocolate Almond",
-//   "Fudge Brownie",
-//   "Banana Nut",
-//   "Black Walnut",
-//   "Cotton Candy Crackle",
-//   "Quarterback Crunch",
-//   "Chocolate Chocolate Chip Cheesecake",
-//   "Caramel 'n' Cookies"
-// ]
+const regionalFlavors = [
+	"Pink Bubblegum",
+	"Caramel Macchiato",
+	"York Peppermint Pattie",
+	"Cotton Candy",
+	"Orange Sherbet",
+	"Grape Ice",
+	"Watermelon Ice",
+	"Miami Vice Sorbet",
+	"Splish Splash®",
+	"Wild 'n Reckless Sherbet",
+	"Lemon Custard",
+	"Oregon Blackberry",
+	"Bananas ‘n Strawberries",
+	"Mississippi Mud",
+	"Rum Raisin",
+	"Creole Cream Cheese",
+	"Chocolate Almond",
+	"Fudge Brownie",
+	"Banana Nut",
+	"Black Walnut",
+	"Cotton Candy Crackle",
+	"Quarterback Crunch",
+	"Chocolate Chocolate Chip Cheesecake",
+	"Caramel 'n' Cookies"
+]
 
+getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors);
 
+// We will use randomInt to both generate a random integer between 1 and 4 to select our array, then a number between 0 and length of that array to select our random item.
+
+function randomInt(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+// originalFlavors, newFlavors, seasonalFlavors, regionalFlavors
+
+function getRandomFlavors(arr1, arr2, arr3, arr4) {
+	for (let i = 1; i <= 4; i++) {
+		let arrayChosen = "arr" + randomInt(1, 4); // Should return arr1, arr2, arr3, or arr4
+		// console.log(arrayChosen);
+		arrayChosen = eval(arrayChosen); // Convert string to variable name
+		//console.log(arrayChosen);
+		//console.log(arrayChosen.length);
+		for (let i = 1; i <= arrayChosen.length; i++) {
+			let finalChoice = arrayChosen[randomInt(0, arrayChosen.length)]; // Choose random index from 0 to length of chosen array
+			//console.log(finalChoice);
+			return finalChoice;
+		}
+	}
+}
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
 function foo() {
