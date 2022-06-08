@@ -188,7 +188,7 @@ let filterByWordArray = filterByWord(originalFlavors, "Chocolate");
 
 function filterByWord(promoArray, flavorPromo) {
 	let newFilteredArray = [];
-	for (i = 1; i < promoArray.length; i++) {
+	for (let i = 1; i < promoArray.length; i++) {
 		//console.log(promoArray[i])
 		if (promoArray[i].includes(flavorPromo)) {
 			newFilteredArray.push(promoArray[i]);
@@ -214,7 +214,7 @@ let testAverageArray = getAverageWordLength(originalFlavors);
 
 function getAverageWordLength(arr) {
 	let averageInt = 0;
-	for (i = 1; i < arr.length; i++) {
+	for (let i = 1; i < arr.length; i++) {
 		averageInt = averageInt + getWordCount(arr[i]);
 		//console.log("Total Words: " + averageInt);
 	}
