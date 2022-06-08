@@ -321,7 +321,10 @@ const regionalFlavors = [
 	"Caramel 'n' Cookies"
 ]
 
-getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors);
+let randomFlavors = [];
+randomFlavors = getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors);
+console.log(randomFlavors);
+console.log(randomFlavors.length);
 
 // We will use randomInt to both generate a random integer between 1 and 4 to select our array, then a number between 0 and length of that array to select our random item.
 
@@ -333,18 +336,19 @@ function randomInt(min, max) {
 // originalFlavors, newFlavors, seasonalFlavors, regionalFlavors
 
 function getRandomFlavors(arr1, arr2, arr3, arr4) {
-	for (let i = 1; i <= 4; i++) {
+	let randomFlavors = [];
+	for (let i = 1; i <= 31; i++) {
 		let arrayChosen = "arr" + randomInt(1, 4); // Should return arr1, arr2, arr3, or arr4
 		// console.log(arrayChosen);
 		arrayChosen = eval(arrayChosen); // Convert string to variable name
 		//console.log(arrayChosen);
 		//console.log(arrayChosen.length);
-		for (let i = 1; i <= arrayChosen.length; i++) {
-			let finalChoice = arrayChosen[randomInt(0, arrayChosen.length)]; // Choose random index from 0 to length of chosen array
-			//console.log(finalChoice);
-			return finalChoice;
-		}
+		let randomIndex = randomInt(0, arrayChosen.length - 1); // Choose random index from 0 to length of chosen array - 1 to account for starting index 0
+		let finalChoice = arrayChosen[randomIndex];
+		randomFlavors.push(finalChoice);;
+
 	}
+	return randomFlavors;
 }
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
